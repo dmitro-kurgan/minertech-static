@@ -1,0 +1,81 @@
+extends ./templates/base
+
+block title
+	title Miner Tech
+block script
+	script.
+block main
+	include ./templates/header
+	#fullpage
+		.content.section.active#section0
+			.banner#banner
+				.container_content
+					.banner_content
+						.row
+							.col-xs-12.col-sm-4
+								.banner_left#bannerLeft1
+									.banner_text#bannerText1
+										h1.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s') AntMiner s9 
+										h2.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s') Самый эффективный майнер в мире
+										p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.5s').
+											Самый мощный в мире биткойн-майнер, но все же меньше, чем многие переносные бум-боксы Antminer S9 следует тому же форм-фактору, что и у чрезвычайно популярного Antminer S7, и почти такого же размера. Тем не менее он имеет более чем трижды мощность и вдвое большую эффективность S7. 
+							.col-xs-12.col-sm-8
+								.banner_right#bannerRight
+									.fixed-panel#fixed-panel
+										div
+											//- ul
+											//- 	li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+											//- 		a(href="#").fa.fa-facebook
+											//- 	li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s')
+											//- 		a(href="#").fa.fa-twitter
+											//- 	li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.5s')
+											//- 		a(href="#").fa.fa-instagram
+											a(href="#secondPage").scroll-down-btn#scroll-down Scroll Down
+									//- .project
+										//- .project__card
+										//- 	a.project__image(href='')
+									.slider.slider-banner.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+										div
+											.banner_img(style='background-image: url(' + require('./components/images/gallery-img-01.jpg') + ')')
+												.banner_img_overlay#bannerImgOverlay1
+										div
+											.banner_img(style='background-image: url(' + require('./components/images/gallery-img-02.jpg') + ')')
+												.banner_img_overlay
+										div
+											.banner_img(style='background-image: url(' + require('./components/images/gallery-img-03.jpg') + ')')
+												.banner_img_overlay
+										div
+											.banner_img(style='background-image: url(' + require('./components/images/gallery-img-04.jpg') + ')')
+												.banner_img_overlay
+										div
+											.banner_img(style='background-image: url(' + require('./components/images/gallery-img-05.jpg') + ')')
+												.banner_img_overlay
+			section.text-mobile
+				.conteiner_content
+		include ./templates/footer
+	include ./templates/thx
+	#hellopreloader
+		#hellopreloader_preload
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/jquery.form-sender.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/intlTelInput.min.js')
+	script(type='text/javascript', src='./js/send.js')
+	script.
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+		function fadeOutnojquery(el){
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function(){
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <=0.05){ 
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}},16);
+		}
+		window.onload = function(){
+			setTimeout(function(){
+				fadeOutnojquery(hellopreloader);
+			},1000);
+		};
+	//- script(src='./libs/jquery.form-sender/jquery.form-sender/jquery.form-sender.js')
+	//- script(src='./libs/jquery.form-sender/intlTelInput.min.js')

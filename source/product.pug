@@ -1,0 +1,278 @@
+extends ./templates/base
+
+block title
+	title AntMiner s9 | Miner Tech
+block script
+	script.
+block main
+	include ./templates/header
+	#fullpage
+		.content.content--product.section.active#section0
+			.banner#product
+				.container_content
+					.banner_tab-content
+						.tab-content#tab-content1
+							#overview.tab-pane.fade.in.active
+								.banner_content
+									.banner_nav-menu
+										ul.nav.nav-tabs1.nav-pills#nav-tabs
+											li(style='border-bottom: none;')
+												a(data-toggle='pill', href='#tab0', style='display: none;').scroll
+											li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+												a(data-toggle='pill', href='#tab1').scroll
+													p ASIC Chip
+													span.banner_nav-menu_img(style='background-image: url(' + require('./components/images/img-circle-2.png') + ')')
+											li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s')
+												a(data-toggle='pill', href='#tab2').scroll
+													p Design
+													span.banner_nav-menu_img(style='background-image: url(' + require('./components/images/photo-7.jpg') + ')')
+											li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.5s')
+												a(data-toggle='pill', href='#tab3').scroll
+													p Microprocessor
+													span.banner_nav-menu_img(style='background-image: url(' + require('./components/images/img-circle-4.png') + ')')
+											li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.75s')
+												a(data-toggle='pill', href='#tab4').scroll
+													p Powerful Yet Cool
+													span.banner_nav-menu_img(style='background-image: url(' + require('./components/images/img-circle-1.jpg') + ')')
+											li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='2s')
+												a(data-toggle='pill', href='#tab5').scroll
+													p Ease of Use
+													span.banner_nav-menu_img(style='background-image: url(' + require('./components/images/img-circle-3.jpg') + ')')
+									.banner_tab-content
+										.tab-content#tab-content2
+											#tab0.tab-pane.fade.in.active
+												.row
+													.col-xs-12.col-md-4
+														.banner_left#bannerLeft0
+															.banner_text#bannerText0
+																h1.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s') AntMiner s9 
+																h2.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s') Самый эффективный майнер в мире
+																span.price.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s') Цена $2000
+																span.contact-us.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s').
+																	* Свяжитесь с нами, чтоб уточнить цену
+																p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.5s').
+																	Самый мощный в мире биткойн-майнер, но все же меньше, чем многие переносные бум-боксы Antminer S9 следует тому же форм-фактору, что и у чрезвычайно популярного Antminer S7, и почти такого же размера. Тем не менее он имеет более чем трижды мощность и вдвое большую эффективность S7.
+																h3.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.75s') Hash Rate
+																p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='2s').
+																	Hash Rate  11.5TH/s, 12.5TH/s, 13TH/s, 13.5TH/s & 14TH/s, depending on batch. Variation of ±5% is expected
+													.col-xs-12.col-md-8
+														.banner_right#bannerRight.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+															//- .project
+															//- 	.project__card
+															//- 		a.project__image(href='')
+															.banner_img(style='background-image: url(' + require('./components/images/banner-photo.jpg') + ')')
+																.banner_img_overlay#bannerImgOverlay0
+											#tab1.tab-pane.fade
+												.row
+													.col-xs-12.col-md-4
+														.banner_left#bannerLeft2
+															.banner_text#bannerText2
+																h1 The BM1387 ASIC Chip
+																h2 The world’s first bitcoin mining ASIC based on the 16nm process node
+																p.
+																	Bitmain’s BM1387 chip is built using TSMC’s 16nm FinFET technology and, delivering a record-breaking 0.098 J/GHs, is the world’s most efficient bitcoin mining chip in the consumer market.
+																p.
+																	Each Antminer S9 employs 189 such chips to deliver more hashrate and efficiency than any bitcoin miner ever made.
+													.col-xs-12.col-md-8
+														.banner_right#bannerRight
+															//- .project
+															//- 	.project__card
+															//- 		a.project__image(href='')
+															.banner_img(style='background-image: url(' + require('./components/images/img-circle-2.png') + ');background-size: initial;')
+																.banner_img_overlay#bannerImgOverlay2
+											#tab2.tab-pane.fade
+												.row
+													.col-xs-12.col-md-4
+														.banner_left#bannerLeft3
+															.banner_text#bannerText3
+																h1 A Compact Time-tested Design
+																h2 World’s most powerful bitcoin miner, yet smaller than many portable boom-boxes
+																p.
+																	The Antminer S9 follows the same form factor as that of the hugely popular Antminer S7 and is nearly the same size. Yet it has more than thrice the power and twice the efficiency of the S7.
+																p.
+																	Each Antminer S9 employs 189 such chips to deliver more hashrate and efficiency than any bitcoin miner ever made.
+
+																//- h1 AntMiner s9 
+																//- h2 Самый эффективный минер в мире
+																//- span.price Цена 2000 $*
+																//- span.contact-us.
+																//- 	*Свяжитесь с нами, чтоб уточнить цену
+																//- p.
+																//- 	Самый мощный в мире биткойн-минер, но все же меньше, чем многие переносные бум-боксы Antminer S9 следует тому же форм-фактору, что и у чрезвычайно популярного Antminer S7, и почти такого же размера. Тем не менее он имеет более чем трижды мощность и вдвое большую эффективность S7.
+																//- h3 Hash Rate
+																//- p.
+																//- 	Hash Rate  11.5TH/s, 12.5TH/s, 13TH/s, 13.5TH/s & 14TH/s, depending on batch. Variation of ±5% is expected
+													.col-xs-12.col-md-8
+														.banner_right#bannerRight
+															//- .project
+															//- 	.project__card
+															//- 		a.project__image(href='')
+															.banner_img(style='background-image: url(' + require('./components/images/gallery-img-02.jpg') + ')')
+																.banner_img_overlay#bannerImgOverlay3
+											#tab3.tab-pane.fade
+												.row
+													.col-xs-12.col-md-4
+														.banner_left#bannerLeft4
+															.banner_text#bannerText4
+																h1 Controlled by a Dual ARM® Cortex®-A9 Microprocessor
+																h2 S9’s control board uses a Xilinx® Zynq®-7000 series FPGA with a Dual ARM® Cortex®-A9 microprocessor
+																p.
+																	Bitmain’s engineering team understood the importance of every detail while working to make the world's most power-efficient yet powerful Bitcoin miner. The Antminer S9’s control board employs the fast Dual ARM® Cortex®-A9 microprocessor with CoreSight™ and supports Gigabit Ethernet to ensure that mined blocks are submitted instantly.
+													.col-xs-12.col-md-8
+														.banner_right#bannerRight
+															//- .project
+															//- 	.project__card
+															//- 		a.project__image(href='')
+															.banner_img(style='background-image: url(' + require('./components/images/img-circle-4.png') + ')')
+																.banner_img_overlay#bannerImgOverlay4
+											#tab4.tab-pane.fade
+												.row
+													.col-xs-12.col-md-4
+														.banner_left#bannerLeft5
+															.banner_text#bannerText5
+																h1 Engineered to Remain Powerful Yet Cool
+																h2 A high-grade aluminium case, customized heat-sinks and two computer-controlled fans to keep it cool
+																p.
+																	Every chip of the S9 is fitted with custom-made heat sinks that are made of a high-grade Aluminium alloy. The case of the S9 is made of the same material. Two computer-controlled high speed fans on both ends of the “tube” ensure that the hot air is rapidly replaced by cooler air at the required pace.
+													.col-xs-12.col-md-8
+														.banner_right#bannerRight
+															//- .project
+															//- 	.project__card
+															//- 		a.project__image(href='')
+															.banner_img(style='background-image: url(' + require('./components/images/photo-10.png') + ')')
+																.banner_img_overlay#bannerImgOverlay5
+											#tab5.tab-pane.fade
+												.row
+													.col-xs-12.col-md-4
+														.banner_left#bannerLeft6
+															.banner_text#bannerText6
+																h1 Ease of Use
+																h2 Antminer’s user interface has been carefully designed keeping in mind the needs of our users
+																p.
+																	After you have accessed the Antminer’s user interface, all you have to do is to enter your wallet address and mining pool settings before you start mining. The user interface also allows you to customize settings and can be upgraded to new releases from Bitmain.
+													.col-xs-12.col-md-8
+														.banner_right#bannerRight
+															//- .project
+															//- 	.project__card
+															//- 		a.project__image(href='')
+															.banner_img(style='background-image: url(' + require('./components/images/photo-11.png') + ');background-size: contain')
+																.banner_img_overlay#bannerImgOverlay6
+							#specification.tab-pane.fade
+								.banner_content
+									table.table.banner_table
+										tbody
+											tr
+												td Hash Rate
+												td.
+													11.5TH/s, 12.5TH/s, 13TH/s, 13.5TH/s & 14TH/s, depending on batch. Variation of ±5% is expected
+											tr
+												td Power Consumption
+												td.
+													1127W (11.5TH/s batch), 1225W (12.5TH/s batch), 1274W (13TH/s batch), 1323W (13.5TH/s batch), 1372W (14TH/s batch) (at the wall, with Bitmain’s APW3 PSU,93% efficiency, 25°C ambient temp). Expected discrepancy of +10%
+											tr
+												td Power Efficiency
+												td.
+													0.098 J/GH +10% at the wall (with Bitmain’s APW3 PSU, 93% efficiency, 25°C ambient temp)
+											tr
+												td Rated Voltage
+												td 11.60 ~13.00V
+											tr
+												td Chip quantity per unit
+												td 189x BM1387
+											tr
+												td Dimensions
+												td 350mm(L) x 135mm(W) x 158mm(H)
+											tr
+												td Cooling
+												td.
+													2x 12038 fans; Front fan: 6000rpm, Rear fan: 4300rpm
+											tr
+												td Operating Temperature
+												td 0°C to 40°C
+											tr
+												td Network Connection
+												td Ethernet
+											tr
+												td Frequency
+												td Automatically set
+							#gallery.tab-pane.fade
+								.banner_content
+									.slider.slider-for
+										div
+											a(href=require("./components/images/gallery-img-01.jpg"), data-fancybox="gallery")
+												.slider-for_box
+													.slider-for_img(style='background-image: url(' + require('./components/images/gallery-img-01.jpg') + ')')
+										div
+											a(href=require("./components/images/gallery-img-04.jpg"), data-fancybox="gallery")
+												.slider-for_box
+													.slider-for_img(style='background-image: url(' + require('./components/images/gallery-img-04.jpg') + ')')
+										div
+											a(href=require("./components/images/gallery-img-02.jpg"), data-fancybox="gallery")
+												.slider-for_box
+													.slider-for_img(style='background-image: url(' + require('./components/images/gallery-img-02.jpg') + ')')
+										//- div
+										//- 	a(href=require("./components/images/gallery-img-01.jpg"), data-fancybox="gallery")
+										//- 		.slider-for_box
+										//- 			.slider-for_img(style='background-image: url(' + require('./components/images/gallery-img-01.jpg') + ')')
+										div
+											a(href=require("./components/images/gallery-img-03.jpg"), data-fancybox="gallery")
+												.slider-for_box
+													.slider-for_img(style='background-image: url(' + require('./components/images/gallery-img-03.jpg') + ')')
+										div
+											a(href=require("./components/images/gallery-img-05.jpg"), data-fancybox="gallery")
+												.slider-for_box
+													.slider-for_img(style='background-image: url(' + require('./components/images/gallery-img-05.jpg') + ')')
+									.slider.slider-nav
+										div
+											.slider-nav_box
+												.slider-nav_img(style='background-image: url(' + require('./components/images/gallery-img-01.jpg') + ')')
+										div
+											.slider-nav_box
+												.slider-nav_img(style='background-image: url(' + require('./components/images/gallery-img-04.jpg') + ')')
+										div
+											.slider-nav_box
+												.slider-nav_img(style='background-image: url(' + require('./components/images/gallery-img-02.jpg') + ')')
+										//- div
+										//- 	.slider-nav_box
+										//- 		.slider-nav_img(style='background-image: url(' + require('./components/images/gallery-img-01.jpg') + ')')
+										div
+											.slider-nav_box
+												.slider-nav_img(style='background-image: url(' + require('./components/images/gallery-img-03.jpg') + ')')
+										div
+											.slider-nav_box
+												.slider-nav_img(style='background-image: url(' + require('./components/images/gallery-img-05.jpg') + ')')
+					.banner_menu
+						ul.nav.nav-tabs2.nav-pills
+							li.active.wow.fadeInUp(data-wow-duration='1s', data-wow-delay='1s')
+								a(data-toggle='pill', href='#overview')#overviewMain Overview
+							li.wow.fadeInUp(data-wow-duration='1s', data-wow-delay='1.25s')
+								a(data-toggle='pill', href='#specification') Specification
+							li.wow.fadeInUp(data-wow-duration='1s', data-wow-delay='1.5s')
+								a(data-toggle='pill', href='#gallery') Gallery
+			section.text-mobile
+				.conteiner_content
+		include ./templates/footer
+	include ./templates/thx
+	#hellopreloader
+		#hellopreloader_preload
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/jquery.form-sender.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/intlTelInput.min.js')
+	script(type='text/javascript', src='./js/send.js')
+	script.
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+		function fadeOutnojquery(el){
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function(){
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <=0.05){ 
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}},16);
+		}
+		window.onload = function(){
+			setTimeout(function(){
+				fadeOutnojquery(hellopreloader);
+			},1000);
+		};

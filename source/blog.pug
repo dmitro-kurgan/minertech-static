@@ -1,0 +1,125 @@
+extends ./templates/base
+
+block title
+	title Blog
+block main
+	include ./templates/header
+	#fullpageBlog
+		.content.content--blog.fp-auto-height.section.active#section0
+			.blog#blog
+				.container_content
+					.row
+						.col-xs-12
+							.blog_block
+								.blog_box.clearfix
+									.blog_box_left.clearfix
+										.blog_box_data.wow.fadeIn(data-wow-duration='1s')
+											.day 02
+											.month дек
+										.blog_box_socials
+											ul
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s')
+													a(href="#").fa.fa-facebook
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s')
+													a(href="#").fa.fa-twitter
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.75s')
+													a(href="#").fa.fa-instagram
+									.blog_box_right
+										a(href="article.html")
+											.blog_box_top.wow.fadeIn(data-wow-duration='1s')
+												.blog_box_img(style='background-image: url(' + require('./components/images/photo-8.jpg') + ')')
+											.blog_box_bottom
+												.blog_box_text
+													h3.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s') AntMiner s9 Самый эффективный майнер в мире
+													p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s').
+														Повседневная практика показывает, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизаци...
+					.row
+						.col-xs-12
+							.blog_block
+								.blog_box.clearfix
+									.blog_box_left.clearfix
+										.blog_box_data.wow.fadeIn(data-wow-duration='1s')
+											.day 02
+											.month дек
+										.blog_box_socials
+											ul
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s')
+													a(href="#").fa.fa-facebook
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s')
+													a(href="#").fa.fa-twitter
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.75s')
+													a(href="#").fa.fa-instagram
+									.blog_box_right
+										a(href="article.html")
+											.blog_box_top.wow.fadeIn(data-wow-duration='1s')
+												.blog_box_img(style='background-image: url(' + require('./components/images/gallery-img-04.jpg') + ')')
+											.blog_box_bottom
+												.blog_box_text
+													h3.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s') AntMiner s9 Самый эффективный майнер в мире
+													p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s').
+														Повседневная практика показывает, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизаци...
+					.row
+						.col-xs-12
+							.blog_block
+								.blog_box.clearfix
+									.blog_box_left.clearfix
+										.blog_box_data.wow.fadeIn(data-wow-duration='1s')
+											.day 02
+											.month дек
+										.blog_box_socials
+											ul
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s')
+													a(href="#").fa.fa-facebook
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s')
+													a(href="#").fa.fa-twitter
+												li.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.75s')
+													a(href="#").fa.fa-instagram
+									.blog_box_right
+										a(href="article.html")
+											.blog_box_top.wow.fadeIn(data-wow-duration='1s')
+												.blog_box_img(style='background-image: url(' + require('./components/images/banner-photo.jpg') + ')')
+											.blog_box_bottom
+												.blog_box_text
+													h3.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s') AntMiner s9 Самый эффективный майнер в мире
+													p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s').
+														Повседневная практика показывает, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизаци...
+					.blog_pagination
+						.pagination-block
+							.pagination.loop-pagination
+								a.prev.page-numbers(href='#')
+									i.arrow.left
+									p Prev
+								a.page-numbers(href='#') 1
+								span.page-numbers.current 2
+								a.page-numbers(href='#') 3
+								span.page-numbers.dots …
+								a.page-numbers(href='#') 10
+								a.next.page-numbers(href='#') Next
+									i.arrow.right
+			section.text-mobile
+				.conteiner_content
+		include ./templates/footer
+	include ./templates/thx
+	#hellopreloader
+		#hellopreloader_preload
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/jquery.form-sender.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/intlTelInput.min.js')
+	script(type='text/javascript', src='./js/send.js')
+	script.
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+		function fadeOutnojquery(el){
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function(){
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <=0.05){ 
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}},16);
+		}
+		window.onload = function(){
+			setTimeout(function(){
+				fadeOutnojquery(hellopreloader);
+			},1000);
+		};

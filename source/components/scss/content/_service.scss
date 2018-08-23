@@ -1,0 +1,308 @@
+.content {
+	&--service {
+
+	}
+}
+.service {
+	padding-top: 160px;
+	height: 100vh;
+	@media screen and (max-height: 780px) {
+		height: initial;
+	}
+	@media #{$mobile} {
+		height: initial;
+		padding-top: 95px;
+	}
+	h1 {
+		@media #{$mobile} {
+			margin-top: 25px;
+		}
+	}
+	h1, h2, h3 {
+		font: 700 normal 28px $PTSerif;
+		margin-bottom: 30px;
+		text-align: center;
+		@media screen and (max-height: 880px) {
+			margin-bottom: 15px;
+		}
+		@media #{$tablet} {
+			font-size: 24px;
+		}
+	}
+	&_aboutus {
+		// max-width: 930px;
+		// margin: auto;
+		padding-bottom: 95px;
+		@media screen and (max-height: 880px) {
+			padding-bottom: 40px;
+		}
+		@media screen and (max-height: 780px) {
+			padding-bottom: 30px;
+		}
+		p {
+			text-align: center;
+			font: 500 normal 17px $Calibri;
+			@media #{$tablet} {
+				font-size: 14px;
+			}
+			@media #{$mobile} {
+				font-size: 17px;
+			}
+		}
+	}
+	&_self {
+		&_block {
+			max-width: 1400px;
+			margin: auto;
+			padding: 40px 0;
+			@media screen and (max-height: 880px) {
+				padding: 20px 0;
+			}
+		}
+		&_inner {
+			background-color: #000;
+			@media #{$mobile} {
+				background-color: transparent;
+			}
+		}
+		&_box {
+			width: 230px;
+			float: left;
+			border-right: 1px solid #676767;
+			@media #{$desctop-lg} {
+				width: 218px;
+			}
+			@media #{$desctop-md} {
+				width: 190px;
+			}
+			@media #{$desctop} {
+				width: 156px;
+			}
+			@media #{$tablet} {
+				width: 120px;
+			}
+			@media #{$mobile} {
+				width: 100%;
+				float: none;
+				display: block;
+				margin-bottom: 40px;
+				border-right: none;
+			}
+			&:first-child {
+				border-left: 1px solid #676767;
+				@media #{$mobile} {
+					border-left: none;
+				}
+				.service {
+					&_self {
+						&_img {
+							background-position: -4px;
+						}
+					}
+				}
+			}
+			&:nth-child(2) {
+				.service {
+					&_self {
+						&_img {
+							background-position: -67px;
+						}
+					}
+				}
+			}
+			&:nth-child(3) {
+				.service {
+					&_self {
+						&_img {
+							background-position: -137px;
+						}
+					}
+				}    
+			}
+			&:nth-child(4) {
+				.service {
+					&_self {
+						&_img {
+							background-position: -203px;
+							width: 65px;
+						}
+					}
+				}	
+			}
+			&:nth-child(5) {
+				.service {
+					&_self {
+						&_img {
+							background-position: -290px;
+						}
+					}
+				}
+			}
+			&:nth-child(6) {
+				.service {
+					&_self {
+						&_img {
+							background-position: -351px;
+						}
+					}
+				}	    
+			}
+		}
+		&_img {
+			height: 50px;
+			width: 50px;
+			background-image: url(../images/self-service-sprite.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: auto;
+		}
+		&_txt {
+			color: #8f8f8f;
+			font: 400 normal 13px $PTSerif;
+			text-align: center;
+			margin-top: 20px;
+			color: $main_color;
+			@media #{$tablet} {
+				margin-top: 15px;
+				font-size: 11px;
+			}
+			@media #{$mobile} {
+				color: #000;
+				font-size: 13px;
+			}
+		}
+	}
+	&_check {
+		padding-top: 60px;
+		// padding-bottom: 90px;
+		@media screen and (max-height: 880px) {
+			padding-top: 40px;
+		}
+		@media screen and (max-height: 780px) {
+			padding-bottom: 60px;
+		}
+		&_block {
+			max-width: 1170px;
+			margin: auto;
+		}
+		&_box {
+			min-height: 165px;
+			width: 20%;
+			float: left;
+			text-align: center;
+			position: relative;
+			padding: 0 15px;
+			@media #{$mobile} {
+				width: 100%;
+				float: none;
+			}
+			&:after, &:before {
+				content: '';
+				position: absolute;
+				height: 80px;
+				width: 1px;
+				background-color: #dfdfdf;
+				top: 40px;
+				bottom: 0px;
+				@media #{$mobile} {
+					display: none;
+				}
+			}
+			&:after {
+				right: 0px;
+			}
+			&:before {
+				left: 0px;
+				display: none;
+			}
+			ul {
+				li {
+					font: 500 normal 16px $Calibri;
+					@media #{$tablet} {
+						font-size: 12px;
+					}
+					a {
+						transition: $main_transition;
+						&:hover {
+							color: #3c3c3c;
+						}
+					}
+				}
+			}
+			&:first-child {
+				&:before {
+					display: block;
+					@media #{$mobile} {
+						display: none;
+					}
+				}
+				.service {
+					&_check {
+						&_img {							
+							background-position: -7px;
+						}
+					}
+				}
+			}
+			&:nth-child(2) {
+				.service {
+					&_check {
+						&_img {
+							background-position: -67px;
+						}
+					}
+				}
+			}
+			&:nth-child(3) {
+				.service {
+					&_check {
+						&_img {
+							background-position: -130px;
+						}
+					}
+				}    
+			}
+			&:nth-child(4) {
+				.service {
+					&_check {
+						&_img {
+							background-position: -200px;
+						}
+					}
+				}
+			}
+			&:nth-child(5) {
+				.service {
+					&_check {
+						&_img {
+							background-position: -273px;
+						}
+					}
+				}
+			}
+		}
+		&_inner {
+			min-height: inherit;
+			display: inline-block;
+			width: 100%;
+			transition: $main_transition;
+			&:hover {
+    			box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.07);
+			}
+		}
+		&_img {
+			background-image: url(../images/check-service-sprite.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: auto;
+			width: 45px;
+			height: 45px;
+			margin-top: 15px;
+		}
+		&_name {
+			font: 400 normal 13px $PTSerif;
+			color: #a9a9a9;
+			margin: 10px 0 5px 0;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+footer.section.fp-auto-height#section1
+	.footer
+		.container_content
+			.footer_main
+				.row
+					.col-xs-12.col-md-8.col-md-push-4
+						.footer_right
+							.footer_block
+								h6.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0s') Написать нам
+								form#order-form(data-title="Заявка на сайте", data-order-form)
+									.form-group.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s')
+										input#name.form-control(, name='name', type='text', required='required', placeholder='Имя', data-is-included='true', data-title='Имя')
+										//- .place_holder Имя
+									.form-group.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s')
+										input#tel.form-control(name='tel', type='tel', required='required', placeholder='Телефон', data-is-included='true', data-title='Телефон')
+										//- .place_holder Телефон
+									.form-group.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.75s')
+										input#email.form-control(name='email', type='e-mail', required='required', placeholder='E-mail', data-is-included='true', data-title='E-mail')
+										//- .place_holder E-mail
+									.form-group.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+										textarea#comment.form-control(name='comment', placeholder='Ваше сообщение', data-is-included='true', data-title='Комментарий')
+									button.btn.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s', type='submit') Отправить
+					.col-xs-12.col-md-4.col-md-pull-8
+						.footer_left
+							.footer_left_top
+								h5.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0s') Контакты
+								p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.5s')
+									| Телефон: 
+									a(href="+380637256675") +38 (063) 725 66 75
+									br
+									| E-mail: 
+									a(href="mailto:contact@miner-tech.com") contact@miner-tech.com
+									br
+									| График работы: 24/7
+								p.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.25s').
+									Адрес: Украина, г. Харьков
+							.footer_left_bottom
+								//- p.footer_production Production by:
+								//- a(href="http://unitspace.top").footer_logo
+								p.footer_copyright.wow.fadeIn(data-wow-duration='1s', data-wow-delay='0.75s')
+									| Copyright © 2018 Miner Tech
+									br
+									| All Rights Reserved.

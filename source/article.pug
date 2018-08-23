@@ -1,0 +1,108 @@
+extends ./templates/base
+
+block title
+	title Article
+
+block main
+	include ./templates/header
+	#fullpageBlog
+		.content.content--article.fp-auto-height.section.active#section0
+			.article
+				.container_content
+					.row
+						.col-xs-12.col-md-5.col-md-push-7.col-sm-4.col-sm-push-8
+							.article_right
+								.article_search.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+									form.article_search_form(role='search')
+										.input-group
+											input#srch-term.form-control(type='text', placeholder='Поиск...', name='srch-term')
+											button.btn(type='submit')
+								.article_posts.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s')
+									h2.section-title Популярные посты
+									a(href="#").article_posts_box
+										p.
+											Разнообразный и богатый опыт использования...
+									a(href="#").article_posts_box
+										p.
+											Разнообразный и богатый опыт использования...
+									a(href="#").article_posts_box
+										p.
+											Разнообразный и богатый опыт использования...
+									a(href="#").article_posts_box
+										p.
+											Разнообразный и богатый опыт использования...
+									a(href="#").article_posts_box
+										p.
+											Разнообразный и богатый опыт использования...
+								.article_archives.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.5s')
+									h2.section-title Архив
+									ul
+										li
+											a(href="#") Ноябрь 2017
+										li
+											a(href="#") Октябрь 2017
+										li
+											a(href="#") Сентябрь 2017
+										li
+											a(href="#") Август 2017
+										li
+											a(href="#") Июль 2017
+										li
+											a(href="#") Июнь 2017
+										li
+											a(href="#") Май 2017
+						.col-xs-12.col-md-7.col-md-pull-5.col-sm-8.col-sm-pull-4
+							.article_left.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+								.article_box.clearfix
+									.article_box_left
+										.article_box_data
+											.day 02
+											.month дек
+										.article_box_socials
+											ul
+												li
+													a(href="#").fa.fa-facebook
+												li
+													a(href="#").fa.fa-twitter
+												li
+													a(href="#").fa.fa-instagram
+									.article_box_right
+										.article_box_top
+											h3 AntMiner s9 Самый эффективный минер в мире
+											.article_box_img(style='background-image: url(' + require('./components/images/photo-8.jpg') + ')')
+										.article_box_bottom
+											.article_box_text
+												p.
+													Таким образом сложившаяся структура организации способствует подготовки и реализации модели развития. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что сложившаяся структура организации требуют определения и уточнения форм развития. Товарищи! консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Товарищи! дальнейшее развитие различных форм деятельности способствует подготовки и реализации существенных финансовых и административных условий. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке соответствующий условий активизации.
+												p.
+													Таким образом сложившаяся структура организации позволяет оценить значение существенных финансовых и административных условий. Повседневная практика показывает, что консультация с широким активом требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Товарищи! реализация намеченных плановых заданий способствует подготовки и реализации дальнейших направлений развития.
+												p.
+													Задача организации, в особенности же укрепление и развитие структуры позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. С другой стороны консультация с широким активом представляет собой интересный эксперимент проверки модели развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Товарищи! дальнейшее развитие различных форм деятельности способствует подготовки и реализации существенных финансовых и административных условий. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке.
+								a(href="", onclick="javascript:history.back(); return false;").btn Назад
+			section.text-mobile
+				.conteiner_content
+		include ./templates/footer
+	include ./templates/thx
+	#hellopreloader
+		#hellopreloader_preload
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/jquery.form-sender.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/intlTelInput.min.js')
+	script(type='text/javascript', src='./js/send.js')
+	script.
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+		function fadeOutnojquery(el){
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function(){
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <=0.05){ 
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}},16);
+		}
+		window.onload = function(){
+			setTimeout(function(){
+				fadeOutnojquery(hellopreloader);
+			},1000);
+		};

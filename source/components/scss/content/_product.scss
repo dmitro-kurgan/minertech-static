@@ -1,0 +1,277 @@
+.content {
+	&--product {
+		.banner {
+			position: relative;
+			@media screen and (max-height: 880px) {
+				display: block;
+			}
+			@media screen and (max-height: 680px) {
+				height: initial;
+				padding-bottom: 80px;
+			}
+			@media screen and (max-width: 991px) {
+				padding-bottom: 80px;
+			}
+			@media #{$tablet} {
+				height: initial;
+			}
+			&_img {
+				@media #{$desctop-lg} {
+					width: 575px;
+				}
+				@media #{$desctop} {
+					width: 450px;
+				}
+				@media #{$tablet} {
+					width: 100%;
+				}
+				&_overlay {
+					color: $main_color;
+				}
+			}
+			&_text {
+				h1 {
+					// font-size: 46px;
+					font-size: 32px;
+					@media #{$mobile} {
+						font-size: 26px;
+					}
+				}
+				h2 {
+					// font-size: 37px;
+					font-size: 24px;
+					margin-top: 10px;
+					@media #{$mobile} {
+						font-size: 18px;
+					}
+				}
+				h3 {
+					// font-weight: 700;
+					// font-size: 25px;
+					margin-top: 50px;
+					font: 700 normal 24px $PTSerif;
+					@media screen and (max-height: 880px) {
+						margin-top: 25px;
+					}
+					@media screen and (max-height: 780px) {
+						margin-top: 15px;
+					}
+				}
+				.price, .contact-us {
+					font-weight: 700;
+					display: block;
+				}
+				.price {
+					margin-top: 35px;
+					// font-weight: 700;
+					// color: #000;
+					@media screen and (max-height: 780px) {
+						margin-top: 15px;
+					}
+					@media #{$mobile} {
+						margin-top: 25px;
+					}
+				}
+				.contact-us {
+					margin-top: 8px;
+					// display: block;
+					font-size: 12px;
+					// font-weight: 700;
+					padding-bottom: 40px;
+					position: relative;
+					color: #989898;
+					@media screen and (max-height: 880px) {
+						padding-bottom: 20px;
+					}
+					@media #{$desctop-md} {
+						padding-bottom: 10px;
+					}
+					&:after {
+						content: '';
+						position: absolute;
+						width: 40px;
+						height: 1px;
+						background-color: #cecece;
+						bottom: 0px;
+						left: 0px;
+					}
+				}
+				p {
+					font-size: 16px;
+					font-weight: 500;
+					color: #000;
+					@media screen and (max-height: 880px) {
+						margin-top: 15px;
+					}
+					@media #{$desctop-md} {
+						margin-top: 10px;
+						font-size: 14px;
+					}
+					@media #{$mobile} {
+						color: $main_color;
+					}
+				}
+			}
+			&_left, &_right {
+				min-height: 575px;
+				@media screen and (max-height: 880px) {
+					min-height: 485px;
+				}
+				@media screen and (max-height: 780px) {
+					min-height: 420px;
+				}
+				@media #{$desctop-md} {
+					// display: block;
+				}
+			}
+			&_left {
+				// background-color: #fcfcfc;
+				@media #{$tablet} {
+					min-height: initial;
+					margin: 15px 0 30px 0;
+				}
+			}
+			&_right {
+				max-width: 800px;
+				@media #{$mobile} {
+					min-height: initial;
+				}
+			}
+		}
+	}
+}
+// .banner {
+// 	.nav
+// }
+// .slider-nav {
+
+// }
+.slider-for, .slider-nav {
+	max-width: 1100px;
+	margin: auto;
+	@media screen and (max-height: 950px) {
+		max-width: 900px;
+	}
+	@media screen and (max-height: 880px) {
+		max-width: 800px;
+	}
+	@media screen and (max-width: 991px) {
+		max-width: 420px;
+	}
+	@media #{$mobile} {
+		max-width: 320px;
+	}
+	&_img {
+		background-size: cover;
+		// background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: auto;
+		cursor: pointer;	
+		// &:focus, &:active {
+		// 	outline: none;
+		// }
+	}
+	.slick-prev, .slick-next {
+		width: 42px;
+		height: 42px;
+		border: 1px solid #c5c5c5;
+		background-color: transparent;
+		@include addPrefix(transform, translate3d(0, 0, 0));
+		transition: $main_transition;
+		&:before {
+			content: '';
+			border: solid #d1d1d1;
+			border-width: 0 3px 3px 0;
+			display: inline-block;
+			padding: 6px;
+			@include addPrefix(transform, translate3d(0, 0, 0));
+			transition: $main_transition;
+		}
+		&:hover {
+			background-color: #000;
+			border-color: #000;
+			&:before {
+				border-color: $main_color;
+			}
+		}
+		// @media #{$mobile} {
+		// 	display: none;
+		// }
+	}
+	.slick-prev {
+		left: -122px;
+		@media #{$desctop} {
+			left: -50px;
+		}
+		&:before {
+			margin-right: -3px;
+			@include addPrefix(transform, rotate(-225deg));
+		}
+	}
+	.slick-next {
+		right: -122px;
+		@media #{$desctop} {
+			right: -50px;
+		}
+		&:before {
+			margin-right: 6px;
+			@include addPrefix(transform, rotate(-45deg));
+		}
+	}
+	.slick-slide {
+		outline: none;
+	}
+}
+.slider-for {
+	&_img {
+		min-height: 575px;
+		width: 100%;
+		width: calc(100% - 20px);
+		@media screen and (max-height: 950px) {
+			min-height: 420px;
+		}
+		@media screen and (max-height: 880px) {
+			min-height: 390px;
+		}
+		@media screen and (max-height: 780px) {
+			min-height: 300px;
+		}
+	}
+}
+.slider-nav {
+	margin-top: 20px;
+	@media screen and (max-height: 780px) {
+		margin-top: 15px;
+	}
+	&_img {
+		min-height: 160px;
+		max-width: 160px;
+		@media screen and (max-height: 950px) {
+			min-height: 130px;
+			max-width: 130px;
+		}
+		@media screen and (max-height: 880px) {
+			min-height: 100px;
+			max-width: 100px;
+		}
+		@media screen and (max-width: 767px) {
+			min-height: 75px;
+			max-width: 75px;
+		}
+	}
+}
+
+
+// ----------slick-slider in bootstrap fix-------------
+.tab-content {
+	position: relative;
+}
+.tab-content > .tab-pane, .pill-content > .pill-pane {		    
+	display: block;
+	height: 0;
+	overflow: hidden;
+}		
+.tab-content > .active, .pill-content > .active {		    
+	height: auto;
+}

@@ -1,0 +1,109 @@
+extends ./templates/base
+
+block title
+	title Поддержка | Miner Tech
+block main
+	include ./templates/header
+	#fullpage
+		.content.content--service.fp-auto-height.section.active#section0
+			.service#service
+				.service_aboutus.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1s')
+					.container_content
+						h1 О Нашей компании
+						p.
+							Таким образом сложившаяся структура организации способствует подготовки и реализации модели развития. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что сложившаяся структура организации требуют определения и уточнения форм развития. Товарищи! консультация с широким активом обеспечивает
+				.service_self.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.25s')
+					h2 Self-Service
+					.service_self_inner
+						.container_content
+							.service_self_block.clearfix
+								a(href="#").service_self_box
+									.service_self_img
+									p.service_self_txt Create Repair Ticket
+								a(href="#").service_self_box
+									.service_self_img
+									p.service_self_txt Buy Material
+								a(href="#").service_self_box
+									.service_self_img
+									p.service_self_txt Buy Parts
+								a(href="#").service_self_box
+									.service_self_img
+									p.service_self_txt Track Package
+								a(href="#").service_self_box
+									.service_self_img
+									p.service_self_txt Warranty Check
+								a(href="#").service_self_box
+									.service_self_img
+									p.service_self_txt Product Support							
+				.service_check.wow.fadeIn(data-wow-duration='1s', data-wow-delay='1.5s')
+					.container_content
+						h3 Check-Service
+						.service_check_block.clearfix
+							.service_check_box
+								.service_check_inner
+									.service_check_img
+									h4.service_check_name Order Support
+									ul
+										li
+											a(href="#") Order Guide ·
+										li
+											a(href="#") Order Check ·
+							.service_check_box
+								.service_check_inner
+									.service_check_img
+									h4.service_check_name Download
+									ul
+										li
+											a(href="#") Product Certificate ·
+										li
+											a(href="#") Operating Instruction ·
+										li
+											a(href="#") Product Firmware ·
+							.service_check_box
+								.service_check_inner
+									.service_check_img
+									h4.service_check_name Repair
+									ul 
+										li
+											a(href="#") Repair Guide
+							.service_check_box
+								.service_check_inner
+									.service_check_img
+									h4.service_check_name Policy
+									ul
+										li
+											a(href="#") Order Policy ·
+										li
+											a(href="#") Repair Policy ·
+							.service_check_box
+								.service_check_inner
+									.service_check_img
+									h4.service_check_name Utility Tool
+									ul
+										li
+											a(href="#") Shipping Calculator
+		include ./templates/footer
+	include ./templates/thx
+	#hellopreloader
+		#hellopreloader_preload
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/jquery.form-sender.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/intlTelInput.min.js')
+	script(type='text/javascript', src='./js/send.js')
+	script.
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+		function fadeOutnojquery(el){
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function(){
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <=0.05){ 
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}},16);
+		}
+		window.onload = function(){
+			setTimeout(function(){
+				fadeOutnojquery(hellopreloader);
+			},1000);
+		};

@@ -1,0 +1,219 @@
+header {
+	.header {
+		position: fixed;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		background-color: $main_color;
+		z-index: 99;
+		transition: $main_transition;
+		@include addPrefix(transform, translate3d(0, 0, 0));
+		&_content {
+			display: flex;
+			justify-content: space-between;
+			padding: 45px 0 45px 0;
+			@media #{$mobile} {
+				padding: 20px 0 20px 0;
+			}
+			// transition: $main_transition;
+		}
+		&_logo {
+			// font: 400 normal 22px $BaronNeue;
+			// color: #000;
+			background-image: url(../images/logo-black.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 111px;
+			height: 55px;
+		}
+		&_menu {
+			@media #{$mobile} {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: fixed;
+				top: 0px;
+				// bottom: 0px;
+				left: -100%;
+				width: 100%;
+				padding: 50px 40px;
+				// border-right: 1px solid #000;
+				background-color: #fff;
+				height: 100vh;
+				transition: .3s left linear;
+			}
+			.close {
+				position: absolute;
+				right: 10px;
+				top: 20px;
+				width: 22px;
+				height: 22px;
+				opacity: 0.3;
+				display: none;
+				@media #{$mobile} {
+					display: block;
+				}
+				&:hover {
+					opacity: 1;
+				}
+				&:before, &:after {
+					position: absolute;
+					left: 10px;
+					content: ' ';
+					height: 22px;
+					width: 2px;
+					background-color: #333;
+				}
+				&:before {
+					transform: rotate(45deg);
+				}
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+			li {
+				float: left;
+				padding-right: 50px;
+				border-bottom: 3px solid #f4f4f4;
+				@media #{$mobile} {
+					padding-right: 0px;
+					float: none;
+					text-align: center;
+					border-bottom: 1px solid #ababab;
+					// max-width: 170px;
+					// margin: auto;
+				}
+				&:last-child {
+					padding-right: 0px;
+				}
+				a {
+					font-size: 18px;
+					font-weight: 700;
+					color: $grey2;
+					display: inline-block;
+					padding-bottom: 20px;
+					position: relative;
+					transition: $main_transition;
+					@media #{$mobile} {
+						padding-top: 20px;
+						width: 100%;
+					}
+					&:hover {
+						color: #000;
+					}
+				}
+				a.current-menu-item {
+					color: #000;
+					transition: $main_transition;
+					&:before {
+						content: '';
+						position: absolute;
+						height: 3px;
+						background-color: #000;
+						width: 100%;
+						bottom: -3px;
+						right: 0px;
+						transition: $main_transition;
+					}
+				}
+			}	
+		}
+		&_menu.opened {
+			left: 0px;
+		}
+		&_hamburger {
+			width: 22px;
+			height: 30px;
+			display: none;
+			@media #{$mobile} {
+				display: block;
+			}
+			.top, .mid, .bottom {
+				display: block;
+				height: 3px;
+				margin-top: 5px;
+				background-color: #000;
+				transition: $main_transition;
+			}
+		}
+	}
+	.header.fixed {
+		background-color: #000;
+		.header {
+			&_content {
+				// padding: 20px 0 30px 0;
+			}
+			&_logo {
+				// color: $main_color;
+				background-image: url(../images/logo-white.svg)
+			}
+			&_menu {
+				li {
+					border-bottom: 3px solid $grey2;
+					@media #{$mobile} {
+						border-bottom: 3px solid #f4f4f4;
+					}
+					a {
+						&:hover {
+							color: $main_color;
+						}
+					}
+					a.current-menu-item {
+						color: $main_color;
+						@media #{$mobile} {
+							color: #000;
+						}
+						&:before {
+							background-color: $main_color;
+							@media #{$mobile} {
+								background-color: #000;
+							}
+						}
+					}
+				}
+				.fixed-panel {
+					li {
+						border: none;
+					}
+				}
+			}
+			&_hamburger {
+				span {
+					background-color: $main_color;
+				}
+			}
+		}
+	}
+}
+.header.header--blog {
+	.header {
+		&_menu {
+			background-color: #000;
+			li {
+				border-bottom: 3px solid #777;
+				a {
+					&:hover {
+						color: $main_color;
+					}
+				}
+			}
+			.close {
+				opacity: 1;
+				&:before, &:after {
+					background-color: $main_color;
+				}
+			}
+		}
+		&_hamburger {
+			.top, .mid, .bottom {
+				background-color: $main_color;
+			}
+		}
+
+	}
+	.current-menu-item {
+		&:before {
+			background-color: $main_color;
+		}
+	}
+}
